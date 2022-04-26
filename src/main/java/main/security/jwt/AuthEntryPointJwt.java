@@ -17,6 +17,11 @@ import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+/**
+ * AuthenticationEntryPoint - будет обнаруживать несанкционированную ошибку и возвращать 401,
+ * когда клиенты получают доступ к защищенным ресурсам без аутентификации.
+ */
+
 @Component
 public class AuthEntryPointJwt implements AuthenticationEntryPoint {
 

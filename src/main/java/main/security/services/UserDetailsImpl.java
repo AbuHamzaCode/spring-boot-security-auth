@@ -12,6 +12,11 @@ import org.springframework.security.core.userdetails.UserDetails;
 import main.models.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+/**
+ * UserDetails - содержит необходимую информацию
+ * (такую как: имя пользователя, пароль, полномочия)
+ * для создания объекта аутентификации.
+ */
 public class UserDetailsImpl implements UserDetails {
     private static final long serialVersionUID = 1L;
 

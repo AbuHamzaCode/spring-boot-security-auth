@@ -19,6 +19,16 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 import main.security.services.UserDetailsServiceImpl;
 
+/**
+ * UsernamePasswordAuthenticationToken - получает {имя пользователя, пароль} из запроса на вход в систему,
+ * AuthenticationManager будет использовать его для аутентификации учетной записи для входа.
+ *
+ * OncePerRequestFilter - выполняет однократное выполнение каждого запроса к нашему API.
+ * Он предоставляет doFilterInternal()метод, который мы реализуем для синтаксического анализа и проверки JWT,
+ * загрузки сведений о пользователе (используя UserDetailsService),
+ * проверки авторизации (используя UsernamePasswordAuthenticationToken).
+ */
+
 public class AuthTokenFilter extends OncePerRequestFilter {
     @Autowired
     private JwtUtils jwtUtils;

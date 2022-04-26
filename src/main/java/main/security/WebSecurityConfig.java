@@ -19,6 +19,17 @@ import main.security.jwt.AuthEntryPointJwt;
 import main.security.jwt.AuthTokenFilter;
 import main.security.services.UserDetailsServiceImpl;
 
+/**
+ *   WebSecurityConfigurerAdapter - это суть нашей реализации безопасности.
+ *   Он предоставляет HttpSecurity конфигурации для настройки cors, csrf, управления сессиями, правил для защищенных ресурсов.
+ *   Мы также можем расширить и настроить конфигурацию по умолчанию, содержащую следующие элементы.
+ *
+ *   AuthenticationManager - имеет DaoAuthenticationProvider(с помощью UserDetailsService& PasswordEncoder)
+ *   для проверки UsernamePasswordAuthenticationToken объекта.
+ *   В случае успеха AuthenticationManager возвращает
+ *   полностью заполненный объект проверки подлинности (включая предоставленные полномочия).
+ */
+
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(

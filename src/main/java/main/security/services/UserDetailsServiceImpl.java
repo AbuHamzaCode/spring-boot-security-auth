@@ -10,6 +10,11 @@ import org.springframework.transaction.annotation.Transactional;
 import main.models.User;
 import main.repository.UserRepository;
 
+/**
+ * UserDetailsService - интерфейс имеет метод для загрузки пользователя по имени пользователя
+ * и возвращает UserDetails объект, который Spring Security может использовать для аутентификации и проверки.
+ */
+
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
     @Autowired
